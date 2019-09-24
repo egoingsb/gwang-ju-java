@@ -2,7 +2,7 @@
 public class VAT {
 
 	public static void main(String[] args) {
-		double total = 1234;
+		double total =  Double.parseDouble(args[0]);
 		double VAT = (total*0.1);
 		double supplyValue = total - VAT;
 		
