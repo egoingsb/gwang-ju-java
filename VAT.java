@@ -1,29 +1,41 @@
-
-public class VAT {
-
-	public static void main(String[] args) {
-		double total =  Double.parseDouble(args[0]);
-		double ratio = 0.1;
-		double VAT = taxVAT(total, ratio);
-		double supplyValue = taxSupplyValue(total, VAT);
-		taxPrint(total, VAT, supplyValue);
-		
+class Tax{
+	/*
+	Tax tax1 = new Tax(10000.0);
+	tax1.print();
+	 */
+	public double total;
+	public static double ratio;
+	public Tax(double _total){
+		total = _total;
 	}
-
-	public static void taxPrint(double total, double VAT, double supplyValue) {
-		System.out.println("total:"+total);
-		System.out.println("VAT:"+VAT);
-		System.out.println("supply value:"+supplyValue);
-	}
-
-	public static double taxSupplyValue(double total, double VAT) {
-		double supplyValue = total - VAT;
+	public double supplyValue() {
+		double supplyValue = total - VAT();
 		return supplyValue;
 	}
-
-	public static double taxVAT(double total, double ratio) {
+	public double VAT() {
 		double VAT = (total*ratio);
 		return VAT;
 	}
+	public void print() {
+		System.out.println("total:"+total);
+		System.out.println("VAT:"+VAT());
+		System.out.println("supply value:"+supplyValue());
+	}
+}
+public class VAT {
+	public static void main(String[] args) {
+		Tax.ratio = 0.1;
+		
+		Tax tax1 = new Tax(10000.0);
+		tax1.print();
+		
+		Tax tax2 = new Tax(20000.0);
+		tax2.print();
+		
+		tax1.print();
+		tax2.print();
+	}
+	
+	
 
 }
