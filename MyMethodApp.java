@@ -6,10 +6,20 @@ public class MyMethodApp {
 	public static void main(String[] args) throws IOException {
 		//..
 		System.out.println(twoTimes("---","A"));
-		//..
-		FileWriter file1 = new FileWriter("result.txt");
-		file1.write(twoTimes("***", "B"));
-		file1.close();
+		System.out.println(twoTimes("***","B"));
+		System.out.println(twoTimes("###","C"));
+		
+		FileWriter f1 = new FileWriter("result1.txt");
+		f1.write("f1");
+		
+		
+		FileWriter f2 = new FileWriter("result2.txt");
+		f2.write("f2");
+		
+		f1.close();
+		f2.close();
+		
+		
 
 	}
 
