@@ -3,15 +3,17 @@ public class MyMethodApp {
 
 	public static void main(String[] args) {
 		//..
-		print("A");
-		print("B");
-		print("C");
+		printA();
+		//..
+		printA();
+		//..
+		printA();
 
 	}
 
-	public static void print(String text) {
-		System.out.println(text);
-		System.out.println(text);
+	private static void printA() {
+		System.out.println("A");
+		System.out.println("A");
 	}
 
 }
