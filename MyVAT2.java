@@ -1,5 +1,3 @@
-package org.opentutorials.iot;
-
 import javax.swing.JOptionPane;
 
 public class MyVAT2 {
