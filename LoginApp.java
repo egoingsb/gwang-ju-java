@@ -10,7 +10,7 @@ public class LoginApp {
 		
 		// 입력한 패스워드가 1111이라면 
 		// if(password == inputPassword) {  X
-		// if(inputPassword.equals(password)) {
+		// if(inputPassword.equals(password)) {  O
 		if(password.equals(inputPassword)) {
 			// 화면에 주인님 안녕하세요를 출력해
 			System.out.println("주인님 안녕하세요.");
