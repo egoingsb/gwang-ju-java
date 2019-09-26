@@ -13,13 +13,15 @@ public class MyVAT2 {
 		System.out.println("Supply Value : " + supplyValue);
 		
 		// 만약 supplyValue가 10000원보다 크다면 
+		if(supplyValue > 10000.0) {
 			System.out.println("Person1 : " + supplyValue * 0.5);
 			System.out.println("Person2 : " + supplyValue * 0.3);
 			System.out.println("Person3 : " + supplyValue * 0.2);
-		// 그렇지 않다면 
+		} else {
 			System.out.println("Person1 : " + supplyValue * 1);
 			System.out.println("Person2 : " + supplyValue * 0);
 			System.out.println("Person3 : " + supplyValue * 0);
+		}
 	}
 
 }
