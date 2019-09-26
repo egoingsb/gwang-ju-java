@@ -12,15 +12,18 @@ public class MyVAT2 {
 		System.out.println("VAT : " + VAT);
 		System.out.println("Supply Value : " + supplyValue);
 		
+		double[] revenue = {0.5, 0.3, 0.2};
+		double[] revenueUnder10000 = {1, 0, 0};
+		
 		// 만약 supplyValue가 10000원보다 크다면 
 		if(supplyValue > 10000.0) {
-			System.out.println("Person1 : " + supplyValue * 0.5);
-			System.out.println("Person2 : " + supplyValue * 0.3);
-			System.out.println("Person3 : " + supplyValue * 0.2);
+			for(int i=0; i<revenue.length; i++) {
+				System.out.println("Person : " + (supplyValue * revenue[i]) );
+			}
 		} else {
-			System.out.println("Person1 : " + supplyValue * 1);
-			System.out.println("Person2 : " + supplyValue * 0);
-			System.out.println("Person3 : " + supplyValue * 0);
+			for(int i=0; i<revenueUnder10000.length; i++) {
+				System.out.println("Person : " + (supplyValue * revenueUnder10000[i]) );
+			}
 		}
 	}
 
