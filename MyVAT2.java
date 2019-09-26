@@ -5,7 +5,7 @@ public class MyVAT2 {
 	public static void main(String[] args) {
 		String inputTotal = JOptionPane.showInputDialog("Please input total : ");
 		double total = Double.parseDouble(inputTotal);
-		double VAT = 10000.0 * 0.1;
+		double VAT = total * 0.1;
 		double supplyValue = total - VAT;
 		
 		System.out.println("Total : " + total);
